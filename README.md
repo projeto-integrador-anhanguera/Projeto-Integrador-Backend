@@ -30,4 +30,10 @@ yarn add react@^16.8.0 react-dom@^16.8.0
 **Banco de dados**
 
 > Instale o pgAdmin na sua máquina https://www.pgadmin.org/download/
+> Configure uma base de dados com o nome: 
+```
+database: 'autosafe',
+username: 'postgres',
+host: '127.0.0.1',
+```
 
