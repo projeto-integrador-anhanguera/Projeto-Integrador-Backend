@@ -26,3 +26,8 @@ _Ele é responsável por testar as requisições HTTP do nosso projeto, tipo o P
 ``` 
 yarn add react@^16.8.0 react-dom@^16.8.0
 ```
+
+**Banco de dados**
+
+> Instale o pgAdmin na sua máquina https://www.pgadmin.org/download/
+
