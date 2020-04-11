@@ -8,23 +8,27 @@ const Car = sequelize.define('Car', {
     },
     model: {
         type: DataTypes.STRING(15),
-        allowNull = false
+        allowNull: false
     },
     releaseYear: {
         type: DataTypes.STRING(4),
-        allowNull = false
+        allowNull: false
     },
     lincensePlate: {
         type: DataTypes.STRING(7),
-        allowNull = false
+        allowNull: false
     },
     rfid: {
         type: DataTypes.STRING(30),
-        allowNull = false
+        allowNull: false
+    },
+    robberyDate: {
+        type: DataTypes.DATE,
+        allowNull: false
     },
     user: {
         type: DataTypes.INTEGER,
-        allowNull = false
+        allowNull: false
     }
 });
 
