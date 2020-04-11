@@ -18,6 +18,9 @@
 _Ele é responsável por testar as requisições HTTP do nosso projeto, tipo o Postman mas pra mim, mais simples de usar e completo_
 > Link https://insomnia.rest/download/
 
+**Nodemon**
+> npm install -g nodemon
+
 ## Frontend 
 
 **Instalar o React 16.8 que já virá com os Hooks com o pacote Yarn ou NPM se preferir**
