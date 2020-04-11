@@ -19,7 +19,7 @@ _Ele é responsável por testar as requisições HTTP do nosso projeto, tipo o P
 > Link https://insomnia.rest/download/
 
 **Nodemon**
-> npm install -g nodemon
+> npm install -g nodemon.
 
 ## Frontend 
 
