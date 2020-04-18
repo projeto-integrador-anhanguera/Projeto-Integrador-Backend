@@ -1,34 +1,23 @@
-module.exports = {
-  local: {
-    database: 'autosafe',
-    username: 'postgres',
-    password: 'postgres',
-    host: '127.0.0.1',
-    dialect: 'postgres'
-  },
+const env = require('./env');
 
-  development: {
-    database: 'autosafe',
-    username: 'postgres',
-    password: 1753951,
-    host: '127.0.0.1',
-    dialect: 'postgres'
-  },
-
-  test: {
-    database: 'autosafe',
-    username: 'postgres',
-    password: 1753951,
-    host: '127.0.0.1',
-    dialect: 'postgres'
-  },
-
-  production: {
-    database: process.env.DB_NAME,
-    username: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    host: process.env.DB_HOST,
-    dialect: 'postgres'
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize(env.envLocal.database, env.envLocal.username, env.envLocal.password, {
+  host: env.envLocal.host,
+  dialect: env.envLocal.dialect,
+  operatorsAliases: false,
+  native: true,
+  logging: true,
+  define: {
+    freezeTableName: true
   }
+});
 
-}
+const db = {};
+
+db.Sequelize = Sequelize;
+db.sequelize = sequelize;
+
+db.car = require('../app/models/CarModel')(sequelize, Sequelize);
+db.user = require('../app/models/UserModel') (sequelize, Sequelize);
+
+module.exports = db;
