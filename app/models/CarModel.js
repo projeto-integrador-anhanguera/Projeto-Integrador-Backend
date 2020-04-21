@@ -15,7 +15,7 @@ const Car = sequelize.define('Car', {
         type: DataTypes.STRING(4),
         allowNull: false
     },
-    lincensePlate: {
+    licensePlate: {
         type: DataTypes.STRING(7),
         allowNull: false
     },
