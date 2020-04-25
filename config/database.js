@@ -2,7 +2,7 @@ module.exports = {
   local: {
     database: 'autosafe',
     username: 'postgres',
-    password: 'postgres',
+    password: 1753951,
     host: '127.0.0.1',
     dialect: 'postgres'
   },

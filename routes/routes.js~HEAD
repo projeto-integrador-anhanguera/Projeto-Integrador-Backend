@@ -14,13 +14,11 @@ routes.post('/register', async (req, res) => {
 });
 
 routes.post('/login', async (req, res) => {
-    const { name, password } = req.body;
-
     const userFind = await User.findAll({
         attributes: ['name', 'password'],
         where: {
-            name: name,
-            password: password
+            name: req.body.name,
+            password: req.body.password
         }
     });
 
