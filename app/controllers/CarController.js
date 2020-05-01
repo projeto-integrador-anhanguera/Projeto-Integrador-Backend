@@ -31,6 +31,6 @@ exports.delete = (req, res) => {
   Customer.destroy({
     where: { id: id },
   }).then(() => {
-    res.status(200).send("deleted successfully a customer with id = " + id);
+    res.status(200).send("deleted successfully a car with id = " + id);
   });
 };
