@@ -8,21 +8,25 @@ module.exports = (sequelize, DataTypes) => {
     model: {
       type: DataTypes.STRING,
     },
-    releaseYear: {
+    status: {
       type: DataTypes.STRING,
     },
     licensePlate: {
       type: DataTypes.STRING,
     },
-    RFID: {
-      type: DataTypes.STRING,
-    },
     robberyDate: {
       type: DataTypes.DATEONLY,
     },
-    customerId: {
+    recoveryDate:{
+      type: DataTypes.DATEONLY
+    },
+    ownerName: {
       type: DataTypes.INTEGER,
     },
+    ownerCNH: {
+      type: DataTypes.STRING
+    },
   });
+
   return Car;
 };
