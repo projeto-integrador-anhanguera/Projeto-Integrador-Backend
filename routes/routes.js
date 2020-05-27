@@ -10,7 +10,7 @@ routes.post("/login", UserController.login);
 /* Car methods */
 routes.post("/api/cars", CarController.create);
 routes.get("/api/cars", CarController.findAll);
-routes.get("/api/cars/:carId", CarController.findById);
+routes.get("/api/cars/:licensePlate", CarController.findByLicensePlate);
 routes.put("/api/cars/:carId", CarController.update);
 routes.delete("/api/cars/:carsId", CarController.delete);
 

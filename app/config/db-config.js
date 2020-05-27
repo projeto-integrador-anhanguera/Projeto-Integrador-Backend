@@ -20,13 +20,13 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //Models/tables
-db.cars = require("../models/CarModel")(sequelize, Sequelize);
-db.users = require("../models/UserModel")(sequelize, Sequelize);
-db.rfid = require('../models/RfidModel')(sequelize, Sequelize);
+db.Car = require("../models/CarModel")(sequelize, Sequelize);
+db.User = require("../models/UserModel")(sequelize, Sequelize);
+db.Rfid = require('../models/RfidModel')(sequelize, Sequelize);
 
 
 //Relationships
-db.cars.hasOne(db.rfid);
-db.rfid.belongsTo(db.cars);
+db.Car.hasOne(db.Rfid);
+db.Rfid.belongsTo(db.Car);
 
 module.exports = db;
