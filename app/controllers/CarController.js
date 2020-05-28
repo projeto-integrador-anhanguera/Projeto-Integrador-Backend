@@ -12,18 +12,10 @@ exports.findByLicensePlate = async function (req, res) {
     service.findByLicensePlate(req, res)
 };
 
-exports.update = (req, res) => {
-    const id = req.params.carId;
-    Car.update(req.body, {where: {id: req.params.carId}}).then(() => {
-        res.status(200).send("updated successfully a car with id = " + id);
-    });
+exports.update = async function (req, res) {
+    service.editRegisteredCar(req, res);
 };
 
-exports.delete = (req, res) => {
-    const id = req.params.customerId;
-    Customer.destroy({
-        where: {id: id},
-    }).then(() => {
-        res.status(200).send("deleted successfully a car with id = " + id);
-    });
+exports.delete = async function (req, res) {
+    service.removeCar(req, res);
 };
