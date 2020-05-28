@@ -26,7 +26,7 @@ db.Rfid = require('../models/RfidModel')(sequelize, Sequelize);
 
 
 //Relationships
-db.Car.hasOne(db.Rfid);
-db.Rfid.belongsTo(db.Car);
+db.Rfid.hasOne(db.Car);
+db.Car.belongsTo(db.Rfid);
 
 module.exports = db;
