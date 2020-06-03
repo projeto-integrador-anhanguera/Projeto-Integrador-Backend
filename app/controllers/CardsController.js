@@ -4,6 +4,6 @@ exports.findAllByStateAndDate = async function (req, res) {
     service.findAllByStateAndDate(req, res);
 };
 
-exports.findAllByState = async function (req, res) {
-    service.findAllByState(req, res);
-}
+exports.findAllByStatus = async function (req, res) {
+    service.findAllByStatus(req, res);
+};
