@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 const op = Sequelize.Op;
 const Car = db.Car;
 
-exports.loadCardOne = async function (req, res) {
+exports.findAllByStateAndDate = async function (req, res) {
     const {startDate, endDate, state} = req.body;
 
     let total = await Car.count({
@@ -22,7 +22,7 @@ exports.loadCardOne = async function (req, res) {
     });
 }
 
-exports.loadCardTwo = function (req, res) {
+exports.findAllByState = function (req, res) {
     const {state} = req.body;
 
     const cars = Car.count({
