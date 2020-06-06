@@ -22,11 +22,5 @@ db.sequelize = sequelize;
 //Models/tables
 db.Car = require("../models/CarModel")(sequelize, Sequelize);
 db.User = require("../models/UserModel")(sequelize, Sequelize);
-db.Rfid = require('../models/RfidModel')(sequelize, Sequelize);
-
-
-//Relationships
-db.Rfid.hasOne(db.Car);
-db.Car.belongsTo(db.Rfid);
 
 module.exports = db;

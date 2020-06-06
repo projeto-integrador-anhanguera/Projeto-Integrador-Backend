@@ -23,7 +23,7 @@ exports.findAllByStateAndDate = async function (req, res) {
 }
 
 exports.findAllByStatus = async function (req, res) {
-    const {startDate, endDate, state} = req.body;
+    const {startDate, endDate, state, status} = req.body;
 
     const total = await Car.count({
         where: {
@@ -34,7 +34,7 @@ exports.findAllByStatus = async function (req, res) {
                 [op.eq]: state
             },
             status: {
-                [op.eq]: 'pending'
+                [op.eq]: status
             }
         }
     });
