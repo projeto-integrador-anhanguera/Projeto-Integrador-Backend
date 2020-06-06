@@ -31,7 +31,6 @@ exports.findByLicensePlate = async function (req, res) {
         return res.json(car);
     }
     return res.status(404).send("Veículo não encontrado!");
-
 }
 
 exports.editRegisteredCar = async function (req, res) {

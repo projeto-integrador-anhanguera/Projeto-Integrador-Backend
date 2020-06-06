@@ -17,6 +17,9 @@ module.exports = (sequelize, DataTypes) => {
         robberyDate: {
             type: DataTypes.DATEONLY
         },
+        robberyLocation: {
+            type: DataTypes.STRING
+        },
         recoveryDate: {
             type: DataTypes.DATEONLY
         },
@@ -28,6 +31,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         state: {
             type: DataTypes.STRING(2),
+        },
+        RFID: {
+            type: DataTypes.STRING
         }
     },
         {
