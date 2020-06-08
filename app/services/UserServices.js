@@ -1,12 +1,13 @@
 const { User } = require('../models/index');
 const jwt = require('jsonwebtoken');
 
-exports.login = async function (req, res) {
+exports.authenticate = async function (req, res) {
     const { name, password } = req.body;
-
+    
     if (!name || !password){
         res.json({ success: false, message: 'Usuário ou senha não informados. '});
     }
+
     User.findAll({
         where: {
             name: name,

@@ -6,7 +6,7 @@ exports.registerCar = async function (req, res) {
     let registeredCar = await findCarByLicensePlate({licensePlate})
 
     if (registeredCar) {
-        return res.status(200).send("Veículo já registrado!");
+        return res.status(200).send({message: "Veículo já registrado!", success: false});
     }
 
     registeredCar = await Car.create(req.body);
@@ -15,6 +15,7 @@ exports.registerCar = async function (req, res) {
             registeredCar
         },
         message: "Veículo cadastrado com sucesso!",
+        success: true
     });
 }
 
@@ -59,9 +60,11 @@ exports.removeCar = async function (req, res) {
         await Car.destroy({
             where: {licensePlate}
         });
-        return res.status(200).send("Veículo excluído com sucesso!");
+
+        return res.status(200).send({message: "Veículo excluído com sucesso!", success: true});
     }
-    return res.status(404).send("Veículo não encontrado!");
+
+    return res.status(200).send({message: "Veículo não encontrado!", success: false});
 }
 
 const findCarByLicensePlate = function (string) {
