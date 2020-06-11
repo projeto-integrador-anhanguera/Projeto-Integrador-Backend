@@ -389,6 +389,7 @@ function makePlates() {
         plate += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     plate += '-';
+
     for (let j = 0; j < 4; j++) {
         plate += numbers.charAt(Math.floor(Math.random() * numbersLength));
     }
