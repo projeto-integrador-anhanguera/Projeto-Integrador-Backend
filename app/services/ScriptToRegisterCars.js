@@ -389,7 +389,8 @@ function makePlates() {
         plate += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     plate += '-';
-    for (let j = 0; j < 3; j++) {
+
+    for (let j = 0; j < 4; j++) {
         plate += numbers.charAt(Math.floor(Math.random() * numbersLength));
     }
     return plate;
@@ -406,8 +407,8 @@ function makeRfid() {
 }
 
 function makeRobberyDate() {
-    let start = new Date(2010, 1, 1);
-    let end = new Date(2020, 6, 1);
+    let start = new Date(2017, 1, 1);
+    let end = new Date(2020, 6, 11);
     return new Date(+start + Math.random() * (end - start));
 }
 
@@ -427,7 +428,7 @@ async function registerToDatabase() {
 }
 
 function register() {
-    for( let i = 0; i < 1000; i++) {
+    for( let i = 0; i < 10000; i++) {
         console.log("ok!");
         registerToDatabase();
     }
