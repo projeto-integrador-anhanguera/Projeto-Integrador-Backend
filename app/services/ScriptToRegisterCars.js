@@ -407,8 +407,8 @@ function makeRfid() {
 }
 
 function makeRobberyDate() {
-    let start = new Date(2010, 1, 1);
-    let end = new Date(2020, 6, 1);
+    let start = new Date(2017, 1, 1);
+    let end = new Date(2020, 6, 11);
     return new Date(+start + Math.random() * (end - start));
 }
 
