@@ -4,7 +4,7 @@ const op = Sequelize.Op;
 const Car = db.Car;
 
 exports.findAllByStateAndDate = async function (req, res) {
-    const {startDate, endDate, state} = req.body;
+    const {startDate, endDate, uf} = req.params;
 
     let total = await Car.count({
         where: {
@@ -12,7 +12,7 @@ exports.findAllByStateAndDate = async function (req, res) {
                 [op.between]: [startDate, endDate]
             },
             state: {
-                [op.eq]: state
+                [op.eq]: uf
             }
         }
     });
