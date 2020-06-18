@@ -7,6 +7,7 @@ const routes = express.Router();
 /* User methods */
 routes.post("/register", UserController.register);
 routes.post("/api/authenticate", UserController.authenticate);
+routes.get("/api/user/:id", UserController.getUserById);
 
 /* Car methods */
 routes.post("/api/cars", CarController.create);
