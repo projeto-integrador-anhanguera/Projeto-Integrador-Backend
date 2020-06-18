@@ -16,3 +16,7 @@ exports.authenticate = async function (req, res) {
 exports.getUserById = async function (req, res) {
     await UserService.getUserById(req, res);
 }
+
+exports.findAll = async function (req, res) {
+    await UserService.findAll(req, res);
+}

@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 
 exports.authenticate = async function (req, res) {
     const {name, password} = req.body;
-
+    
     if (!name || !password) {
         res.json({success: false, message: 'Usuário ou senha não informados. '});
     }
@@ -27,9 +27,7 @@ exports.authenticate = async function (req, res) {
                 success: true,
                 message: 'Sucesso ao fazer o login!',
                 token: token,
-                userId: usuario.id,
-                name: usuario.name,
-                nome: usuario.nome
+                name: name
             });
         }
     });
@@ -56,4 +54,9 @@ exports.getUserById = async function (req, res) {
         name: user.name,
         email: user.email
     });
+}
+
+exports.findAll = async function (req, res) {
+    const users = await User.findAll();
+    return res.json(users);
 }

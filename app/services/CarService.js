@@ -29,9 +29,9 @@ exports.findByLicensePlate = async function (req, res) {
     const car = await findCarByLicensePlate({licensePlate})
 
     if (car) {
-        return res.json(car);
+        return res.json({success: true, car});
     }
-    return res.status(404).send("Veículo não encontrado!");
+    return res.status(200).send({success: false, message: "Veículo não encontrado!"});
 }
 
 exports.editRegisteredCar = async function (req, res) {
