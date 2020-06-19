@@ -35,7 +35,7 @@ exports.findByLicensePlate = async function (req, res) {
 }
 
 exports.editRegisteredCar = async function (req, res) {
-    const {licensePlate} = req.params;
+    const {licensePlate} = req.body;
     let car = await findCarByLicensePlate({licensePlate});
 
     if (car) {
