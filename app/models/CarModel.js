@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         city: {
-            type: DataTypes.STRING(2),
+            type: DataTypes.STRING,
         },
         RFID: {
             type: DataTypes.STRING
