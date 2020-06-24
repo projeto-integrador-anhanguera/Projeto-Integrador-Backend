@@ -29,8 +29,8 @@ module.exports = (sequelize, DataTypes) => {
         ownerCNH: {
             type: DataTypes.STRING
         },
-        state: {
-            type: DataTypes.STRING(2),
+        city: {
+            type: DataTypes.STRING,
         },
         RFID: {
             type: DataTypes.STRING

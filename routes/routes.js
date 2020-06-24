@@ -18,7 +18,7 @@ routes.delete("/api/cars/:licensePlate", CarController.delete);
 routes.get("/api/cars/:licensePlate", CarController.findByLicensePlate);
 
 /* Cards methods */
-routes.get("/api/cards/one/:startDate/:endDate/:uf", CardsController.findAllByStateAndDate);
-routes.get("/api/cards/two/:startDate/:endDate/:uf/:status", CardsController.findAllByStatus);
+routes.get("/api/cards/one/:startDate/:endDate/:city", CardsController.findAllByStateAndDate);
+routes.get("/api/cards/two/:startDate/:endDate/:city/:status", CardsController.findAllByStatus);
 
 module.exports = routes;
